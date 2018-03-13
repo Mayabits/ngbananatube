@@ -3,6 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { InsectionComponent } from "./insection/insection.component";
 import { QuienessomosComponent } from "./quienessomos/quienessomos.component";
 import { ContactoComponent } from "./contacto/contacto.component";
+import { PoliticaprivacidadComponent } from "./politicaprivacidad/politicaprivacidad.component";
+import { TerminosycondicionesComponent } from "./terminosycondiciones/terminosycondiciones.component";
 
 const routes: Routes = [
   {
@@ -15,6 +17,14 @@ const routes: Routes = [
   },
   {
     path: 'quienessomos',
+    component: QuienessomosComponent
+  },
+    {
+    path: 'politicaprivacidad',
+    component: QuienessomosComponent
+  },
+    {
+    path: 'terminosycondiciones',
     component: QuienessomosComponent
   },
   
