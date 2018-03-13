@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
+import { InsectionComponent } from './insection/insection.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    InsectionComponent
   ],
   imports: [
     BrowserModule,

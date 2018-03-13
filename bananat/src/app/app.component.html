@@ -1,21 +1,86 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<!--HEADER-->
+<div class="container-fluid">
+    <header class="row">
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-4 text-left">
+            <nav id="login" class="navbar navbar-toggleable-md navbar-light bg-faded">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item impar">
+                            <a class="nav-link" href="iniciarsesion.html">Iniciar sesión <span class="sr-only"></span></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="registro.html">Registrarse</a>
+                        </li>
+                        <li class="nav-item d-block d-sm-none impar">
+                            <a class="nav-link " href="">Quiénes somos</a>
+                        </li>
+                         <li class="nav-item d-block d-sm-none">
+                         
+                            <a class="nav-link " href="">Condiciones de uso</a>
+                        </li>
+                        <li class="nav-item d-block d-sm-none impar">
+                            <a class="nav-link " href="">Política de privacidad</a>
+                        </li>
+                        <li class="nav-item d-block d-sm-none">
+                            <a class="nav-link " href="">Contacto</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+        </div>
+        <div class="col-xl-9 col-lg-9 col-md-9 col-sm-8 col-8 text-center">
+            <div class="row">
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-10 col-10 ">
+                    <div id="logo">
+                        <a href=index.php>
+                            <img src="../assets/images/logo-banana.png" width="150" alt="BananaTube"/>
+                        </a>
+                        <p>ILUSIÓN POR VIAJAR</p>
+                    </div>
+                </div>
+                <div class="col-xl-7 col-lg-7 col-md-7 col-sm-9 col-9 ">
+
+                    <form name="miformulario" id="formhead" action="" method="post">
+                        <div class="input-group ">
+                            <input type="text" class="form-control" name="buscador" id="buscador" placeholder="DESTINO/GASTRONOMÍA/CULTURA/AVENTURA" />
+                            <div class="input-group-btn">
+                                <button type="submit" name="button" class="btn-secondary btn" value="">Buscar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--contenido variable-->
 <router-outlet></router-outlet>
+
+    <!--footer-->
+    <footer class="row">
+        <nav class="col-xl-3 col-lg-4 col-md-5 col-sm-7  d-none d-sm-block text-left">
+            <ul>
+                <li><a href="#">QUIÉNES SOMOS</a></li>
+                <li><a href="#">TÉRMINOS Y CONDICIONES DE USO</a></li>
+                <li><a href="#">POLÍTICA DE PRIVACIDAD</a></li>
+                <li><a href="#">CONTACTO</a></li>
+            </ul>
+        </nav>
+        <div class="col-xl-3 offset-xl-6 col-lg-4 offset-lg-4 col-md-4 offset-md-3 col-sm-5  d-none d-sm-block" id="socialmedia">
+            <ul>
+                <a href="http://www.facebook.com"><img src="assets/images/socialmedia/facebook.png" alt="Facebook" width=30/></a>
+                <a href="http://www.twitter.es"><img src="assets/images/socialmedia/twitter.png" alt="Twitter" width=30/></a>
+                <a href="http://www.instagram.com"><img src="assets/images/socialmedia/instagram.png" alt="Instagram" width=30/></a>
+                <a href="http://www.linkedin.com"><img src="assets/images/socialmedia/linkedin.png" alt="LinkedIn" width=30/></a>
+                <a href="http://www.youtube.es"><img src="assets/images/socialmedia/youtube.png" alt="Youtube" width=30/></a>
+            </ul>
+            <p> ®2018 · BANANATUBE, MONKEY BUSSINES</p>
+        </div>
+    </footer>
+</div>
+
