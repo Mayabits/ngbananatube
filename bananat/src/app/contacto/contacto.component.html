@@ -1,64 +1,88 @@
-     <div id="body">
-        <section class="row" id="titulo" role="banner">
-            <h1 class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center">CONTACTO</h1>
-        </section>
-        <div class="container-fluid margin" role="form">
-            <section class="row" id="contenido">
-                <div class="col-xl-4 offset-xl-3 col-lg-4 offset-lg-3 col-md-5 offset-md-2 col-sm-6 offset-sm-3 col-7 offset-3 form-group">
-                    <form name="miformulario" id="formcontacto" action="" method="post" class="needs-validation row" novalidate>
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                            <label for="nombre">NOMBRE Y APELLIDOS/EMPRESA/ORGANIZACIÓN:</label>
-                            <br/>
-                            <input type="text" name="nombre" id="nombre" value="" autocomplete="off" required aria-required="true" minlength=3 class="form-control" />
-                          
-                              <div class="invalid-feedback">
-                               <i class="fa fa-times" aria-hidden="true"></i>Por favor, escribe un nombre válido.
-                              </div>
+<div id="body">
+    <section class="row" id="titulo">
+        <h1 class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center">CONTACTO</h1>
+    </section>
+    <div class="container-fluid margin">
+        <section class="row" id="contenido">
+            <div class="col-xl-4 offset-xl-3 col-lg-4 offset-lg-3 col-md-5 offset-md-2 col-sm-6 offset-sm-3 col-7 offset-3">
+
+                                <form id="formcontacto" (ngSubmit)="onSubmit(contactoForm)" #contactoForm>
+                    <div class="form-group col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <label for="name">NOMBRE Y APELLIDOS/EMPRESA/ORGANIZACIÓN:</label>
+                        <br/>
+                        <input #name="ngModel" type="text" class="form-control" id="nombre" required [(ngModel)]="contacto.name" name="name" minlength="2" autocomplete="off" required aria-required="true" />
+
+                        <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+
+                            <div *ngIf="name.errors.required">
+                                El nombre es obligatorio
+                            </div>
+                            <div *ngIf="name.errors.minlength">
+                                El nombre debe tener al menos 2 caracteres
+                            </div>
+
                         </div>
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                            <label for="email">CORREO ELECTRÓNICO:</label>
-                            <br/>
-                            <input type="email" name="email" id="email" value="" autocomplete="off" required aria-required="true" class="form-control" />
-                              <div class="invalid-feedback">
-                               <i class="fa fa-times" aria-hidden="true"></i>Por favor, escribe un correo electrónico válido.
-                              </div>
+                    </div>
+                    <div class="form-group col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <label for="email">CORREO ELECTRÓNICO:</label>
+                        <br/>
+
+                        <input #email="ngModel" type="email" class="form-control" id="email" autocomplete="off" required aria-required="true" [(ngModel)]="contacto.email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+                        <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+
+                            <div *ngIf="email.errors.required">
+                                El email es obligatorio
+                            </div>
+                            <div *ngIf="email.errors?.pattern">
+                                El email debe ser válido
+                            </div>
+
                         </div>
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                            <label for="mensaje">MENSAJE:</label>
-                            <br/>
-                            <textarea rows="5" cols="4" name="mensaje" id="mensaje" value="" required aria-required="true" autocomplete="off" class="form-control" maxlength="1000"></textarea>
-                              <div class="invalid-feedback">
-                               <i class="fa fa-times" aria-hidden="true"></i>Por favor, escribe un comentario.
-                              </div>
+                    </div>
+                    <div class="form-group col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <label for="mensaje">MENSAJE:</label>
+                        <br/>
+
+                        <textarea #mensaje="ngModel" type="text" class="form-control" id="mensaje" required [(ngModel)]="contacto.mensaje" name="mensaje" required aria-required="true" autocomplete="off" maxlength="1000"></textarea>
+                        <div *ngIf="mensaje.invalid && (mensaje.dirty || mensaje.touched)" class="alert alert-danger">
+
+                            <div *ngIf="mensaje.errors.required">
+                                El mensaje es obligatorio
+                            </div>
+                            <div *ngIf="mensaje.errors.maxlength">
+                                El mensaje tiene un máximo de 1000 caracteres.
+                            </div>
+
                         </div>
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                            <button class="btn btn-light" type="submit" name="button" value="">ENVIAR</button>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-xl-3 offset-xl-1 col-lg-3 offset-lg-1 col-md-4 offset-md-1 col-sm-5 offset-sm-3 col-8 offset-3" id="derecha">
-                    <div class="row">
-                        <div class="col-xl-12">
+                    </div>
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <button type="submit" class="btn btn-light" [disabled]="!contactoForm.form.valid">ENVIAR</button>
+
+                    </div>
+                </form>
+            <div class="col-xl-3 offset-xl-1 col-lg-3 offset-lg-1 col-md-4 offset-md-1 col-sm-5 offset-sm-3 col-8 offset-3" id="derecha">
+                <div class="row">
+                    <div class="col-xl-12">
                         <h5>DIRECCIÓN</h5>
                         <p>C/ MARQUÉS DE AHUMADA, 9</p>
                         <p>28028 MADRID, ESPAÑA</p>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="row">
-                        <div  class="col-xl-12">
-                        <h5>TELÉFONO</h5>
-                        <p>+34 638 569 801</p>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="row">
-                        <div  class="col-xl-12">
-                        <h5>CORREO ELECTRÓNICO</h5>
-                        <p>bananatube.mb@gmail.com</p>
-                        </div>
                     </div>
                 </div>
-            </section>
-        </div>
-    
+                <br>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <h5>TELÉFONO</h5>
+                        <p>+34 638 569 801</p>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <h5>CORREO ELECTRÓNICO</h5>
+                        <p>bananatube.mb@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+    </div>
