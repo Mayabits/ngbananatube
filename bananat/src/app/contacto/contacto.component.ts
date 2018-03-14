@@ -8,14 +8,21 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./contacto.component.css']
 })
 export class ContactoComponent implements OnInit {
-
-    constructor() { 
+    constructor() {  
+    
+  }
 
         
-    }
+    
   ngOnInit() {
   }
 
+
     
   
+
+  onSubmit() {
+
+  }
+
 }
