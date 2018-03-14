@@ -6,60 +6,36 @@
         <section class="row" id="contenido">
             <div class="col-xl-4 offset-xl-3 col-lg-4 offset-lg-3 col-md-5 offset-md-2 col-sm-6 offset-sm-3 col-7 offset-3">
 
-                                <form id="formcontacto" (ngSubmit)="onSubmit(contactoForm)" #contactoForm>
+                                <form id="formcontacto">
                     <div class="form-group col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <label for="name">NOMBRE Y APELLIDOS/EMPRESA/ORGANIZACIÓN:</label>
                         <br/>
-                        <input #name="ngModel" type="text" class="form-control" id="nombre" required [(ngModel)]="contacto.name" name="name" minlength="2" autocomplete="off" required aria-required="true" />
+                        <input type="text" class="form-control" id="nombre" name="name" minlength="2" autocomplete="off" required="required" aria-required="true" />
 
-                        <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
-
-                            <div *ngIf="name.errors.required">
-                                El nombre es obligatorio
-                            </div>
-                            <div *ngIf="name.errors.minlength">
-                                El nombre debe tener al menos 2 caracteres
-                            </div>
-
-                        </div>
+                        
                     </div>
                     <div class="form-group col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <label for="email">CORREO ELECTRÓNICO:</label>
                         <br/>
 
-                        <input #email="ngModel" type="email" class="form-control" id="email" autocomplete="off" required aria-required="true" [(ngModel)]="contacto.email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
-                        <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
-
-                            <div *ngIf="email.errors.required">
-                                El email es obligatorio
-                            </div>
-                            <div *ngIf="email.errors?.pattern">
-                                El email debe ser válido
-                            </div>
-
-                        </div>
+                        <input  type="email" class="form-control" id="email" autocomplete="off" required="required" aria-required="true" name="email" />
+                        
                     </div>
                     <div class="form-group col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <label for="mensaje">MENSAJE:</label>
                         <br/>
 
-                        <textarea #mensaje="ngModel" type="text" class="form-control" id="mensaje" required [(ngModel)]="contacto.mensaje" name="mensaje" required aria-required="true" autocomplete="off" maxlength="1000"></textarea>
-                        <div *ngIf="mensaje.invalid && (mensaje.dirty || mensaje.touched)" class="alert alert-danger">
+                        <textarea type="text" class="form-control" id="mensaje" required  name="mensaje" required="required" aria-required="true" autocomplete="off" maxlength="1000"></textarea>
+                       
 
-                            <div *ngIf="mensaje.errors.required">
-                                El mensaje es obligatorio
-                            </div>
-                            <div *ngIf="mensaje.errors.maxlength">
-                                El mensaje tiene un máximo de 1000 caracteres.
-                            </div>
-
-                        </div>
+                        
                     </div>
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <button type="submit" class="btn btn-light" [disabled]="!contactoForm.form.valid">ENVIAR</button>
+                        <button type="submit" class="btn btn-light" >ENVIAR</button>
 
                     </div>
                 </form>
+            </div>
             <div class="col-xl-3 offset-xl-1 col-lg-3 offset-lg-1 col-md-4 offset-md-1 col-sm-5 offset-sm-3 col-8 offset-3" id="derecha">
                 <div class="row">
                     <div class="col-xl-12">
@@ -83,6 +59,6 @@
                     </div>
                 </div>
             </div>
-            </div>
+            
         </section>
     </div>
