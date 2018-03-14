@@ -1,0 +1,73 @@
+@font-face {
+    font-family: "Raleway";
+    src: url(../../assets/fonts/raleway2.woff2) format("woff2"),
+         url(../../assets/fonts/raleway2.ttf) format("truetype");
+}
+@font-face{
+    font-family: "ReenieBeanie";
+        src: url(../../assets/fonts/ReenieBeanie.woff2) format("woff2"),
+             url(../../assets/fonts/ReenieBeanie.ttf) format("truetype");
+}
+/*Header*/
+header{
+    background-color: #F2F2F2;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Raleway,arial,sans-serif;
+    font-size: 14px;
+}
+
+/*desarrollo*/
+#volver a{
+    margin-top: 20px;
+    margin-right: 30px;
+    color:#454545;
+}
+#volver a:hover{
+        color:#3EAC7E;
+}
+
+.contenido{
+    padding: 20px;
+    background-color: #F2F2F2;
+    margin-bottom: 20px;
+}
+
+.contenido p{
+    text-indent: 10px;
+    font-family: monospace;
+    text-align: justify;
+}
+
+
+
+/*formato general del footer*/
+footer{
+    padding-top: 20px;
+    margin: 0 auto;
+    padding-right: 15px;
+    background-color: #F2F2F2;
+    font-family: Raleway,arial,sans-serif;
+    font-size: 14px;
+    color: #454545; 
+}
+
+footer li{
+    list-style-type:none;
+}
+footer a{
+    color: #1F5941;
+    text-decoration: none;
+    
+}
+a:hover{
+    color:#3EAC7E;
+    text-decoration: none;
+}
+figcaption{
+    color:#1F5941;
+    text-align: center;
+}
