@@ -5,6 +5,9 @@ import {ContactoComponent} from './contacto/contacto.component';
 import {QuienessomosComponent} from './quienessomos/quienessomos.component';
 import {TerminosComponent} from './terminos/terminos.component';
 import {PrivacidadComponent} from './privacidad/privacidad.component';
+import {RegistroComponent} from './registro/registro.component';
+import {IniciosesionComponent} from './iniciosesion/iniciosesion.component';
+import {RecuperapassComponent} from './recuperapass/recuperapass.component';
 
 const routes: Routes = [
     {
@@ -26,6 +29,18 @@ const routes: Routes = [
     {
         path: 'privacidad',
         component: PrivacidadComponent
+    },
+    {
+        path:'registro',
+        component: RegistroComponent
+    },
+    {
+        path:'iniciosesion',
+        component:IniciosesionComponent
+    },
+    {
+        path:'recuperapass',
+        component:RecuperapassComponent
     }
 ];
 
