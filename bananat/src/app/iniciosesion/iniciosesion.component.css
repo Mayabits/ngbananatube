@@ -14,7 +14,7 @@ body{
 }
 /*Maquetado imagen izquierda*/
 #izquierda{
-    height:100%;
+    height:735px;
     width:100%;
     text-align: center;
     background-image: url(../../assets/images/inicarsesion.png);
