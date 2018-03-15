@@ -1,14 +1,10 @@
-/*@font-face {
+@font-face {
     font-family: "Raleway";
     src: url(../assets/fonts/raleway2.woff2) format("woff2"),
          url(../assets/fonts/raleway2.ttf) format("truetype");
 }
-@font-face{
-    font-family: "ReenieBeanie";
-        src: url(../assets/fonts/ReenieBeanie.woff2) format("woff2"),
-             url(../assets/fonts/ReenieBeanie.ttf) format("truetype");
-}*/
-body{
+
+#body{
     margin: 0;
     padding: 0;
     font-family: "Raleway", sans-serif;
