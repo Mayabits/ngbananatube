@@ -1,6 +1,7 @@
 <!--HEADER-->
 <div class="container-fluid">
     <header class="row">
+        <div *ngIf="location == '' || location =='iniciosesion'||location=='registro'||location=='recuperapass'">
         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-4 text-left">
             <nav id="login" class="navbar navbar-toggleable-md navbar-light bg-faded">
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,23 +11,23 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item impar">
-                            <a class="nav-link" href="iniciarsesion.html">Iniciar sesión <span class="sr-only"></span></a>
+                            <a class="nav-link" routerLink="iniciosesion">Iniciar sesión <span class="sr-only"></span></a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="registro.html">Registrarse</a>
+                            <a class="nav-link" routerLink="registro">Registrarse</a>
                         </li>
                         <li class="nav-item d-block d-sm-none impar">
-                            <a class="nav-link " href="">Quiénes somos</a>
+                            <a class="nav-link " routerLink="quienessomos">Quiénes somos</a>
                         </li>
                          <li class="nav-item d-block d-sm-none">
                          
-                            <a class="nav-link " href="">Condiciones de uso</a>
+                            <a class="nav-link " routerLink="terminos">Términos de uso</a>
                         </li>
                         <li class="nav-item d-block d-sm-none impar">
-                            <a class="nav-link " href="">Política de privacidad</a>
+                            <a class="nav-link " routerLink="privacidad">Política de privacidad</a>
                         </li>
                         <li class="nav-item d-block d-sm-none">
-                            <a class="nav-link " href="">Contacto</a>
+                            <a class="nav-link " routerLink="contacto">Contacto</a>
                         </li>
                     </ul>
 
@@ -37,7 +38,7 @@
             <div class="row">
                 <div class="col-xl-3 col-lg-3 col-md-4 col-sm-10 col-10 ">
                     <div id="logo">
-                        <a href=index.php>
+                        <a routerLink="">
                             <img src="../assets/images/logo-banana.png" width="150" alt="BananaTube"/>
                         </a>
                         <p>ILUSIÓN POR VIAJAR</p>
@@ -56,6 +57,28 @@
                 </div>
             </div>
         </div>
+        </div>
+        <div *ngIf="location != '' || location !='iniciosesion'||location!='registro'||location!='recuperapass'">
+            <div class="col-xl-2 offset-xl-5 col-lg-3 offset-lg-5 col-md-3 offset-md-5 col-sm-4 col-12">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center">
+                        <a href=index.php>
+                            <img src="../assets/images/logo-banana.png" width="150" alt="BananaTube"/>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center">
+                        <p id="eslogan">ILUSIÓN POR VIAJAR</p>
+                    </div>
+                </div>
+            </div>
+            <div id="login" class="col-xl-3 offset-xl-5 col-lg-3 offset-lg-5 col-md-4 offset-md-2 col-sm-6 ml-sm-auto col-12 text-right">
+                <strong><a href="iniciarsesion.html">INICIAR SESIÓN</a></strong>
+                <strong><a href="registro.html">REGISTRARSE </a></strong>
+            </div>
+        </div>
     </header>
 
     <!--contenido variable-->
@@ -65,10 +88,10 @@
     <footer class="row">
         <nav class="col-xl-3 col-lg-4 col-md-5 col-sm-7  d-none d-sm-block text-left">
             <ul>
-                <li><a href="#">QUIÉNES SOMOS</a></li>
-                <li><a href="#">TÉRMINOS Y CONDICIONES DE USO</a></li>
-                <li><a href="#">POLÍTICA DE PRIVACIDAD</a></li>
-                <li><a href="#">CONTACTO</a></li>
+                <li><a routerLink="quienessomos">QUIÉNES SOMOS</a></li>
+                <li><a routerLink="terminos">TÉRMINOS Y CONDICIONES DE USO</a></li>
+                <li><a routerLink="terminos">POLÍTICA DE PRIVACIDAD</a></li>
+                <li><a routerLink="contacto">CONTACTO</a></li>
             </ul>
         </nav>
         <div class="col-xl-3 offset-xl-6 col-lg-4 offset-lg-4 col-md-4 offset-md-3 col-sm-5  d-none d-sm-block" id="socialmedia">
