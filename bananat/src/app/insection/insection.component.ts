@@ -12,4 +12,7 @@ export class InsectionComponent implements OnInit {
   ngOnInit() {
   }
 
+  /*OnSubmit(busqueda) {
+  }*/
+
 }

@@ -1,0 +1,253 @@
+@font-face {
+    font-family: "Raleway";
+    src: url(../../assets/fonts/raleway2.woff2) format("woff2"),
+         url(../../assets/fonts/raleway2.ttf) format("truetype");
+}
+@font-face{
+    font-family: "ReenieBeanie";
+        src: url(.../../assets/fonts/ReenieBeanie.woff2) format("woff2"),
+             url(../../assets/fonts/ReenieBeanie.ttf) format("truetype");
+}
+/*Header*/
+header{
+    background-color: #F2F2F2;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+}
+
+/* portada*/
+#portada{
+    background-image: url(../../assets/images/oporto.jpg);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 0px;
+    margin-top: 15px;
+    margin-top: 15px;
+    margin-bottom: 80px;
+    height: 300px;
+}
+
+
+.video-wrapper{
+    padding: 1%;
+    padding-top: 8%;
+    }
+
+/*Play hover
+
+
+.video-wrapper video{
+    position: relative;
+    z-index: -2; 
+}
+.video-wrapper div:hover {
+    background: url(.../../assets/images/playalternativo.png) no-repeat;
+    background-size: 30%;
+    background-position: center;
+    z-index: 2;
+}
+
+*/
+.next{
+    align-content: center;
+    z-index: 3;
+}
+.next img{
+    width: 40px;
+}
+
+#foto img{
+   width: 220px;
+   position: absolute;
+}
+#info h3{
+    letter-spacing: 16px;
+    text-align: center;
+    font-size: 2.3em;
+    font-weight:bolder;
+    
+}
+#info button{
+    height: 35px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-right: 20px;
+    
+}
+#info button a{
+    color: #454545;
+    text-decoration: none;
+}
+#info button a:hover{
+        text-decoration: none;
+        color: #454545;
+} 
+#info h2{
+    margin-top: 30px;
+    font-size: 18px;
+    padding-right: 55px;
+    border-right: 1px solid #454545;
+}
+
+.gris{
+    margin: 10px;
+    background-color: #F2F2F2;
+    padding: 40px;
+    height: 400px;
+}
+
+
+
+/*MEDIA QUERIES*/
+    
+        
+@media screen and (max-width:2000px){
+    #info h3{
+        text-align: center;
+        letter-spacing: 14px;
+        font-size: 2.1em
+    }
+    #foto{
+      padding-top: 180px;
+      padding-left: 4%;   
+    }
+    .next{
+        margin-top: 15%;
+        margin-left: -97px;
+    }
+}
+
+@media screen and (max-width:1600px){
+     .next{
+        margin-left: -80px;
+    }
+}
+@media screen and (max-width:990px){
+    #info button {
+        font-size: 12px;
+        text-align: center;
+    }
+    #datos h2{
+        font-size: 14px;
+        padding-right: 5px;
+        text-align: right;
+    }
+    #portada{
+        height: 180px;
+    }
+    #foto{
+        padding-top: 100px;
+    }
+     .next{
+        margin-left: -87px;
+    }
+}
+@media screen and (max-width:780px){
+    #info h3{
+        letter-spacing: 14px;
+        font-size: 2em;
+        text-align: center;
+    }
+   
+   #foto{
+    padding-top: 90px;
+    padding-left: 15%;
+   }
+    #foto img{
+     width: 180px; 
+   }
+     .video-wrapper{
+        max-height: 4px;
+    }
+    .next{
+      margin-top: 10%;
+      margin-left: -94px;
+   }
+    #video-der{
+        display: none;
+    }
+}
+
+@media screen and (max-width:576px){
+    #datos h2{
+        text-align: center;
+        font-size: 14px;
+        padding-right: 5px;
+        border: none;
+        margin-top: 10px;
+    }
+    #info h3{
+        text-align: center;
+        padding-left: 5%;
+    }
+     #foto{
+       padding-top: 90px;
+         padding-left: 0px;
+   }
+     #foto img{
+       width: 190px;
+      
+   }
+    .video-wrapper{
+        max-height: 90px;
+    }
+    #video-centro{
+        display: none;
+    }
+    #video-der{
+        display: none;
+    }
+    .next{
+      margin-top: 20%;
+      margin-left: -60%;
+      transform: rotate(0.25turn)
+   }
+}
+
+.pulsado{
+    display:none;
+}
+/* footer*/
+footer{
+    padding-top: 20px;
+    margin: 0px;
+    padding-right: 15px;
+    background-color: #F2F2F2;
+    font-family: Raleway,arial,sans-serif;
+    font-size: 14px;
+    color: #454545; 
+}
+
+footer li{
+    list-style-type:none;
+}
+
+footer a{
+    color: #1F5941;
+    text-decoration: none;
+    padding: 0 auto;
+}
+footer a:hover{
+    color:#3EAC7E;
+    text-decoration: none;
+}
+/*responsive*/
+@media screen and (max-width:778px){
+    footer{
+        font-size: 12px;
+    }
+    
+}
+@media screen and (max-width:640px){
+    footer{
+        font-size: 10px;
+        height: 100px;
+    }
+}

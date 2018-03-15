@@ -9,6 +9,11 @@ import { ContactoComponent } from './contacto/contacto.component';
 import { QuienessomosComponent } from './quienessomos/quienessomos.component';
 import { TerminosComponent } from './terminos/terminos.component';
 import { PrivacidadComponent } from './privacidad/privacidad.component';
+import { BusquedaComponent } from './busqueda/busqueda.component';
+import { PerfilusuarioComponent } from './perfilusuario/perfilusuario.component';
+import { RegistroComponent } from './registro/registro.component';
+import { IniciosesionComponent } from './iniciosesion/iniciosesion.component';
+import { RecuperapassComponent } from './recuperapass/recuperapass.component';
 
 
 @NgModule({
@@ -18,7 +23,12 @@ import { PrivacidadComponent } from './privacidad/privacidad.component';
     ContactoComponent,
     QuienessomosComponent,
     TerminosComponent,
-    PrivacidadComponent
+    PrivacidadComponent,
+    BusquedaComponent,
+    PerfilusuarioComponent,
+    RegistroComponent,
+    IniciosesionComponent,
+    RecuperapassComponent
   ],
   imports: [
     BrowserModule,
