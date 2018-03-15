@@ -1,0 +1,109 @@
+<!--HEADER-->
+<div class="container-fluid">
+    <header class="row">
+        <div *ngIf="location == '' || location =='iniciosesion'||location=='registro'||location=='recuperapass'">
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-4 text-left">
+            <nav id="login" class="navbar navbar-toggleable-md navbar-light bg-faded">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item impar">
+                            <a class="nav-link" routerLink="iniciosesion">Iniciar sesión <span class="sr-only"></span></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" routerLink="registro">Registrarse</a>
+                        </li>
+                        <li class="nav-item d-block d-sm-none impar">
+                            <a class="nav-link " routerLink="quienessomos">Quiénes somos</a>
+                        </li>
+                         <li class="nav-item d-block d-sm-none">
+                         
+                            <a class="nav-link " routerLink="terminos">Términos de uso</a>
+                        </li>
+                        <li class="nav-item d-block d-sm-none impar">
+                            <a class="nav-link " routerLink="privacidad">Política de privacidad</a>
+                        </li>
+                        <li class="nav-item d-block d-sm-none">
+                            <a class="nav-link " routerLink="contacto">Contacto</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+        </div>
+        <div class="col-xl-9 col-lg-9 col-md-9 col-sm-8 col-8 text-center">
+            <div class="row">
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-10 col-10 ">
+                    <div id="logo">
+                        <a routerLink="">
+                            <img src="../assets/images/logo-banana.png" width="150" alt="BananaTube"/>
+                        </a>
+                        <p>ILUSIÓN POR VIAJAR</p>
+                    </div>
+                </div>
+                <div class="col-xl-7 col-lg-7 col-md-7 col-sm-9 col-9 ">
+
+                    <form name="miformulario" id="formhead" action="" method="post">
+                        <div class="input-group ">
+                            <input type="text" class="form-control" name="buscador" id="buscador" placeholder="DESTINO/GASTRONOMÍA/CULTURA/AVENTURA" />
+                            <div class="input-group-btn">
+                                <button type="submit" name="button" class="btn-secondary btn" value="">Buscar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div *ngIf="location != '' || location !='iniciosesion'||location!='registro'||location!='recuperapass'">
+            <div class="col-xl-2 offset-xl-5 col-lg-3 offset-lg-5 col-md-3 offset-md-5 col-sm-4 col-12">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center">
+                        <a href=index.php>
+                            <img src="../assets/images/logo-banana.png" width="150" alt="BananaTube"/>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center">
+                        <p id="eslogan">ILUSIÓN POR VIAJAR</p>
+                    </div>
+                </div>
+            </div>
+            <div id="login" class="col-xl-3 offset-xl-5 col-lg-3 offset-lg-5 col-md-4 offset-md-2 col-sm-6 ml-sm-auto col-12 text-right">
+                <strong><a href="iniciarsesion.html">INICIAR SESIÓN</a></strong>
+                <strong><a href="registro.html">REGISTRARSE </a></strong>
+            </div>
+        </div>
+    </header>
+
+    <!--contenido variable-->
+<router-outlet></router-outlet>
+
+    <!--footer-->
+    <footer class="row">
+        <nav class="col-xl-3 col-lg-4 col-md-5 col-sm-7  d-none d-sm-block text-left">
+            <ul>
+                <li><a routerLink="quienessomos">QUIÉNES SOMOS</a></li>
+                <li><a routerLink="terminos">TÉRMINOS Y CONDICIONES DE USO</a></li>
+                <li><a routerLink="privacidad">POLÍTICA DE PRIVACIDAD</a></li>
+                <li><a routerLink="contacto">CONTACTO</a></li>
+            </ul>
+        </nav>
+        <div class="col-xl-3 offset-xl-6 col-lg-4 offset-lg-4 col-md-4 offset-md-3 col-sm-5  d-none d-sm-block" id="socialmedia">
+            <ul>
+                <a href="http://www.facebook.com"><img src="assets/images/socialmedia/facebook.png" alt="Facebook" width=30/></a>
+                <a href="http://www.twitter.es"><img src="assets/images/socialmedia/twitter.png" alt="Twitter" width=30/></a>
+                <a href="http://www.instagram.com"><img src="assets/images/socialmedia/instagram.png" alt="Instagram" width=30/></a>
+                <a href="http://www.linkedin.com"><img src="assets/images/socialmedia/linkedin.png" alt="LinkedIn" width=30/></a>
+                <a href="http://www.youtube.es"><img src="assets/images/socialmedia/youtube.png" alt="Youtube" width=30/></a>
+            </ul>
+            <p> ®2018 · BANANATUBE, MONKEY BUSSINES</p>
+        </div>
+    </footer>
+</div>
+

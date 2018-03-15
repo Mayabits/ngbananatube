@@ -1,0 +1,104 @@
+/*@font-face {
+    font-family: "Raleway";
+    src: url(../assets/fonts/raleway2.woff2) format("woff2"),
+         url(../assets/fonts/raleway2.ttf) format("truetype");
+}
+@font-face{
+    font-family: "ReenieBeanie";
+        src: url(../assets/fonts/ReenieBeanie.woff2) format("woff2"),
+             url(../assets/fonts/ReenieBeanie.ttf) format("truetype");
+}*/
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+}
+
+/*header*/  
+header{
+    background-color: #F2F2F2;
+}
+#login{
+    margin-top: 5px;
+}
+#login a {
+    color: #1f5941;
+    text-decoration: none;
+}
+#login a:hover {
+    color: #3EAC7E;
+}
+#logo p{
+    font-size: 12px;
+}
+.impar{
+    background-color: rgba(255,255,255,0.8);
+}
+
+/* footer*/
+footer{
+    padding-top: 20px;
+    background-color: #F2F2F2;
+    font-family: Raleway,arial,sans-serif;
+    font-size: 12px;
+    height: 110px;
+}
+
+footer li{
+    list-style-type:none;
+}
+
+
+footer a{
+    color: #1F5941;
+    text-decoration: none;
+    padding: 0 auto;
+}
+footer a:hover{
+    color:#3EAC7E;
+    text-decoration: none;
+}
+footer p{
+    font-size: 10px;
+}
+#socialmedia{
+     text-align: right;
+}
+
+@media screen and (min-width:577px) {
+    #formhead input {
+        font-size: 10px;
+        margin-top: 20px;
+    }
+    #formhead button {
+        font-size: 10px;
+        margin-top: 20px;
+    }
+
+}
+/*responsive header*/
+@media screen and  (max-width: 767px) {
+    #formhead input{
+        font-size: 10px;
+        margin-bottom: 20px;
+        margin-top: -3px;
+    }
+       #formhead button{
+           font-size: 10px;
+        margin-bottom: 20px;
+        margin-top: -3px;
+    }
+}
+/*responsive footer*/
+@media screen and (max-width:608px){
+    footer img{
+        width: 25px;
+    }
+}
+@media screen and (max-width:575px){
+    footer {
+        display: none;
+        
+    }
+}
