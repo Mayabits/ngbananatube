@@ -12,14 +12,9 @@ export class ContactoComponent implements OnInit {
     
   }
 
-        
     
   ngOnInit() {
   }
-
-
-    
-  
 
   onSubmit() {
 
