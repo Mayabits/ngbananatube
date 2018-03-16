@@ -8,6 +8,8 @@ import {PrivacidadComponent} from './privacidad/privacidad.component';
 import {RegistroComponent} from './registro/registro.component';
 import {IniciosesionComponent} from './iniciosesion/iniciosesion.component';
 import {RecuperapassComponent} from './recuperapass/recuperapass.component';
+import {BusquedaComponent} from './busqueda/busqueda.component';
+import {PerfilusuarioComponent} from './perfilusuario/perfilusuario.component';
 
 const routes: Routes = [
     {
@@ -41,6 +43,14 @@ const routes: Routes = [
     {
         path:'recuperapass',
         component:RecuperapassComponent
+    },
+    {
+        path: 'busqueda',
+        component: BusquedaComponent
+    },
+    {
+        path: 'perfilusuario',
+        component: PerfilusuarioComponent
     }
 ];
 

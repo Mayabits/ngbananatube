@@ -1,0 +1,151 @@
+@font-face {
+    font-family: "Raleway";
+    src: url(../../assets/fonts/raleway2.woff2) format("woff2"),
+         url(../../assets/fonts/raleway2.ttf) format("truetype");
+}
+@font-face{
+    font-family: "ReenieBeanie";
+        src: url(../../assets/fonts/ReenieBeanie.woff2) format("woff2"),
+             url(../../assets/fonts/ReenieBeanie.ttf) format("truetype");
+}
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+#body{
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;   
+    background-image:url(../../assets/images/quienesbanana.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*Main content*/
+#titular{
+    background-color: rgba(255, 255, 255,0.6);
+    margin-top: 30px;
+}
+#titulo{
+    height: 40px;
+    letter-spacing: 20px;
+    margin: 35px;
+    margin-bottom: 20px;
+    font-size: 2.3em;
+    font-weight:bolder;
+}
+
+#who{
+    font-family:"ReenieBeanie";
+    font-size: 20pt;
+    padding: 0 auto;
+    padding-bottom: 10px;
+    margin: 0 auto;
+}
+#MB{
+    font-family: "Raleway";
+    height: 40px;
+    letter-spacing: 20px;
+    margin: 35px;
+    margin-bottom: 20px;
+    font-size: 2.3em;
+    font-weight:bolder;
+}
+#meetus{
+      background-color: rgba(255, 255, 255,0.6);
+        margin-bottom: 30px;
+        margin-top: 30px;
+        margin-left: 0px;
+        height: 150%;
+        width: 100%;
+}
+
+#descripcion{
+    font-family: "Raleway";
+    text-align:center;
+    font-size: 14pt;
+    padding-left: 10px;
+    padding-right: 10px;
+   
+}
+h4{
+    font-family:"ReenieBeanie";
+    font-size: 30pt;
+    text-align: center;
+}
+.linkedin a{
+   padding-left: 48%;
+}
+
+h5{
+    font-family: "Raleway";
+    font-size: 16pt;
+    text-align: center;
+}
+
+
+
+p{
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: justify;
+}
+
+#derechos{
+    background-color: rgba(255, 255, 255,0.6);
+    text-align: center;
+    padding: 5px;
+    
+}
+/*formato general del footer*/
+
+footer{
+    padding-right: 25px;
+    padding-top: 15px;
+    margin-top: 20px;
+    background-color: #F2F2F2;
+    height: 90px;
+}
+
+footer li{
+    list-style-type:none;
+}
+
+footer a{
+    color: #1F5941;
+    text-decoration: none;
+    padding: 0 auto;
+}
+footer a:hover{
+    color:#3EAC7E;
+}
+
+/*responsive*/
+@media screen and (max-width:778px){
+    footer{
+        font-size: 12px;
+    }
+    
+}
+@media screen and (max-width:720px){
+    footer{
+        font-size: 10px;
+        height: 100px;
+    }
+    img footer{
+        width: 10px;
+    }
+    #titulo{
+        font-size: 2.2em;
+        padding-bottom: 60px;
+    }
+    #descripcion{
+        padding: 5%;
+        font-size: 1em;
+        
+    }
+}
+    

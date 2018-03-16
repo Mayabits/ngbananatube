@@ -1,0 +1,113 @@
+/*fuentes*/
+
+@font-face {
+    font-family: "Raleway";
+    src: url(".../../assets/fonts/raleway2.woff2");
+}
+
+@font-face {
+    font-family: "ReenieBeanie";
+    src: url("../../assets/fonts/ReenieBeanie.woff2");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway";
+    font-size: 14px;
+    color: #454545;
+}
+
+/*contenido*/
+
+#titulo {
+    height: 60px;
+    letter-spacing: 20px;
+    margin: 35px;
+    height: 100px;
+    padding-top: 30px;
+    font-size: 2.3em;
+    font-weight: bolder;
+    background-image: url(../../assets/images/quienessomosrosa.jpg)
+}
+#contenido{
+    margin: 20px;
+}
+#contenido h3{
+    font-family: "ReenieBeanie";
+}
+.video{
+    margin-left: 80px;
+}
+
+.video-centro video{
+    margin-top: 7%;
+    position: relative;
+    z-index: -1;
+    
+}
+.video-centro:hover {
+    background: url(../../assets/images/playalternativo.png) no-repeat;
+    background-size: 30%;
+    background-position: center;
+    z-index: 2;
+}
+.next{
+    margin-top: 5%;
+}
+
+
+
+
+/*formato general del footer*/
+
+footer {
+    font-size: 14px;
+    padding-right: 25px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    background-color: #F2F2F2;
+    height: 90px;
+}
+
+footer li {
+    list-style-type: none;
+}
+
+footer a {
+    color: #1F5941;
+    text-decoration: none;
+    padding: 0 auto;
+}
+
+footer a:hover {
+    color: #3EAC7E;
+}
+
+
+
+/*Media query*/
+@media (max-width:1300px)
+ 
+@media  (max-width:900px)
+    @media   (max-width:700px){
+        #contenido{
+            height: 300px;
+        }
+        #titulo{
+    height: 30px;
+    letter-spacing: 10px;
+    margin: 5px;
+    height: 100px;
+    padding-top: 10px;
+    font-size: 1em;
+}
+        }        
+
+@media   (max-width:576px)
+@media   (max-width:778px)
+@media   (max-width:640px){
+    .next img {
+        height: 40%
+    }
+}
